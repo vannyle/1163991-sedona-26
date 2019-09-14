@@ -25,8 +25,8 @@
     <div>
       <img src="img/background-photo@2x.png" width="1200" alt="Слоган Седоны">
       <div>
-        <img src="img/icons/intro-mask.svg" width="187" alt="">
-        <img src="img/icons/intro-welcome.svg" width="456" alt="">
+        <img src="img/icons/intro-mask.svg" width="187" alt="Welcome to the gorgeous">
+        <img src="img/icons/intro-welcome.svg" width="456" alt="Sedona because the Grand Canyon sucks">
       </div>
     </div>
     <div>
@@ -40,22 +40,22 @@
       <h3>Настоящий городок</h3>
       <p>- №1 -</p>
       <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-      <img src="img/feature-picture-1@2x.png" width="800" alt="">
+      <img src="img/feature-picture-1@2x.png" width="800" alt="Картинка города">
     </div>
     <div>
       <ul>
         <li>
-          <img src="https://via.placeholder.com/150x100" alt="иконка">
+          <img src="https://via.placeholder.com/150x100" alt="жилье">
           <h3>Жилье</h3>
           <p>Порекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li>
-          <img src="https://via.placeholder.com/150x100" alt="иконка">
+          <img src="https://via.placeholder.com/150x100" alt="еда">
           <h3>Еда</h3>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
         <li>
-          <img src="https://via.placeholder.com/150x100" alt="иконка">
+          <img src="https://via.placeholder.com/150x100" alt="сувениры">
           <h3>Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
         </li>
@@ -65,7 +65,7 @@
       <h3>Там есть мост дьявола</h3>
       <p>- №2 -</p>
       <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-      <p><img src="img/feature-picture-2@2x.png" width="800" alt=""></p>
+      <p><img src="img/feature-picture-2@2x.png" width="800" alt="Картинка города"></p>
     </div>
     <div>
       <ul>
@@ -91,8 +91,29 @@
     <h2>Заинтересовались?</h2>
     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     <h3><a href="#">Поиск гостиниц в городе</a></h3>
-    <!--Здесь будет форма-->
-    <button type="button">Найти</button>
+    <form action="/" method="post">
+      <p>
+        <label for="date-of-arrival">Дата заезда</label>
+        <input id="date-of-arrival" type="date" name="date" value="2017-04-27" placeholder="24 Апреля 2017">
+      </p>
+      <p>
+        <label for="date-of-depature">Дата выезда</label>
+        <input id="date-of-depature" type="date" name="date" value="2017-07-04" placeholder="4 Июля 2017">
+      </p>
+      <p>
+        <label for="adult">Взрослые</label>
+        <input type="button" value="-" class="minus">
+        <input type="number" min="0" id="adult" value="2">
+        <input type="button" value="+" class="plus">
+      </p>
+      <p>
+        <label for="children">Дети</label>
+        <input type="button" value="-" class="minus">
+        <input type="number" min="0" id="children" value="0">
+        <input type="button" value="+" class="plus">
+      </p>
+    </form>
+    <button type="submit">Найти</button>
   </section>
   <section>
     <h2>Карта</h2>

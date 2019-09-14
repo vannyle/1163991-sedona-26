@@ -23,30 +23,57 @@
   <section>
     <h2 class="visually-hidden">Фильтр гостиницы</h2>
     <div>
-      <ul>
-        <li>
-          <h3>Инфаструктура</h3>
-          <!-- Здесь будет форма -->
-        </li>
-        <li>
-          <h3>Тип жилья</h3>
-          <!-- Здесь будет форма -->
-        </li>
-        <li>
-          <h3>Стоимость в сутки (Р):</h3>
-          <!-- Здесь будет форма -->
-          <button type="button">Показать</button>
-        </li>
-      </ul>
+      <fieldset>
+        <legend>Инфаструктура</legend>
+        <ul>
+          <li>
+            <label for="filter-pool">Бассейн</label>
+            <input type="checkbox" name="pool" id="filter-pool" checked>
+          </li>
+          <li>
+            <label for="filter-parking">Парковка</label>
+            <input type="checkbox" name="parking" id="filter-parking">
+          </li>
+          <li>
+            <label for="filter-wifi">Wi-Fi</label>
+            <input type="checkbox" name="wifi" id="filter-wifi">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Тип жилья</legend>
+        <ul>
+          <li>
+            <label for="filter-hotel">Гостиница</label>
+            <input type="checkbox" name="hotel" id="filter-hotel" checked>
+          </li>
+          <li>
+            <label for="filter-motel">Мотель</label>
+            <input type="checkbox" name="motel" id="filter-motel" checked>
+          </li>
+          <li>
+            <label for="filter-apartments">Апартаменты</label>
+            <input type="checkbox" name="apartments" id="filter-apartments" checked>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Стоимость в сутки</legend>
+          <span class="min-price">От 0</span>
+          <span class="max-price">До 3000</span>
+          <input type="range" name="price" min="0" max="3000">
+          <button type="submit">Показать</button>
+      </fieldset>
     </div>
     <div>
       <span>Найдено: 3</span>
       <span>Сортировка</span>
       <ul>
-        <li>По цене</li>
-        <li>По типу</li>
-        <li>По рейтингу</li>
+        <li><a href="#">По цене</a></li>
+        <li><a href="#">По типу</a></li>
+        <li><a href="#">По рейтингу</a></li>
       </ul>
+
     </div>
   </section>
   <section>
