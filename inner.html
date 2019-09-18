@@ -22,50 +22,48 @@
   <h1 class="visually-hidden">Бронирование гостиницы</h1>
   <section>
     <h2 class="visually-hidden">Фильтр гостиницы</h2>
-    <div>
+    <fieldset>
+      <legend>Инфаструктура</legend>
+      <ul>
+        <li>
+          <label for="filter-pool">Бассейн</label>
+          <input type="checkbox" name="pool" id="filter-pool" checked>
+        </li>
+        <li>
+          <label for="filter-parking">Парковка</label>
+          <input type="checkbox" name="parking" id="filter-parking">
+        </li>
+        <li>
+          <label for="filter-wifi">Wi-Fi</label>
+          <input type="checkbox" name="wifi" id="filter-wifi">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>Тип жилья</legend>
+      <ul>
+        <li>
+          <label for="filter-hotel">Гостиница</label>
+          <input type="checkbox" name="hotel" id="filter-hotel" checked>
+        </li>
+        <li>
+          <label for="filter-motel">Мотель</label>
+          <input type="checkbox" name="motel" id="filter-motel" checked>
+        </li>
+        <li>
+          <label for="filter-apartments">Апартаменты</label>
+          <input type="checkbox" name="apartments" id="filter-apartments" checked>
+        </li>
+      </ul>
+    </fieldset>
+    <form action="/" method="post">
       <fieldset>
-        <legend>Инфаструктура</legend>
-        <ul>
-          <li>
-            <label for="filter-pool">Бассейн</label>
-            <input type="checkbox" name="pool" id="filter-pool" checked>
-          </li>
-          <li>
-            <label for="filter-parking">Парковка</label>
-            <input type="checkbox" name="parking" id="filter-parking">
-          </li>
-          <li>
-            <label for="filter-wifi">Wi-Fi</label>
-            <input type="checkbox" name="wifi" id="filter-wifi">
-          </li>
-        </ul>
+        <legend>Стоимость в сутки (Р):</legend>
+        <input type="submit" name="min-price" id="min-price" value="От 0">
+        <input type="submit" name="max-price" id="max-price" value="До 3000">
+        <input type="submit" value="Показать">
       </fieldset>
-      <fieldset>
-        <legend>Тип жилья</legend>
-        <ul>
-          <li>
-            <label for="filter-hotel">Гостиница</label>
-            <input type="checkbox" name="hotel" id="filter-hotel" checked>
-          </li>
-          <li>
-            <label for="filter-motel">Мотель</label>
-            <input type="checkbox" name="motel" id="filter-motel" checked>
-          </li>
-          <li>
-            <label for="filter-apartments">Апартаменты</label>
-            <input type="checkbox" name="apartments" id="filter-apartments" checked>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset>
-        <legend>Стоимость в сутки</legend>
-        <span class="min-price">От 0</span>
-        <span class="max-price">До 3000</span>
-        <input type="range" name="price" min="0" max="3000">
-        <!-- Стоит ли делать тут label для input? -->
-        <button type="submit">Показать</button>
-      </fieldset>
-    </div>
+    </form>
     <div>
       <span>Найдено: 3</span>
       <span>Сортировка</span>
@@ -74,11 +72,14 @@
         <li><a href="#">По типу</a></li>
         <li><a href="#">По рейтингу</a></li>
       </ul>
-
+    </div>
+    <div>
+      <input type="image" src="img/icons/icon-up-dir.svg" alt="Вверх">
+      <input type="image" src="img/icons/icon-down-dir.svg" alt="Вниз">
     </div>
   </section>
   <section>
-    <h2 class="visually-hidden">Гостиницы</h2>
+    <h2 class="visually-hidden">Результат поиска</h2>
     <div>
       <h3><a href="#">Amara Resort and Spa</a></h3>
       <a href="#">
