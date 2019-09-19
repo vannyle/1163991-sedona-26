@@ -80,30 +80,31 @@
   <section>
     <h2>Заинтересовались?</h2>
     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-    <h3><a href="#">Поиск гостиниц в городе</a></h3>
+    <a href="#"><h3>Поиск гостиниц в городе</h3></a>
     <form action="/" method="post">
       <p>
-        <label for="date-of-arrival">Дата заезда</label>
-        <input id="date-of-arrival" type="date" name="date" value="2017-04-27" placeholder="24 Апреля 2017">
+        <label for="arrival-date">Дата заезда</label>
+        <input type="text" name="date" id="arrival-date"  value="27 Апреля 2017">
       </p>
       <p>
-        <label for="date-of-depature">Дата выезда</label>
-        <input id="date-of-depature" type="date" name="date" value="2017-07-04" placeholder="4 Июля 2017">
+        <label for="depature-date">Дата выезда</label>
+        <input type="text" name="date" id="depature-date" value="04 Июля 2017">
       </p>
       <p>
         <label for="adult">Взрослые</label>
         <input type="button" value="-" class="minus">
-        <input type="number" min="0" id="adult" value="2">
+        <input type="text" min="0" id="adult" value="2">
         <input type="button" value="+" class="plus">
       </p>
       <p>
         <label for="children">Дети</label>
         <input type="button" value="-" class="minus">
-        <input type="number" min="0" id="children" value="0">
+        <input type="text" min="0" id="children" value="0">
         <input type="button" value="+" class="plus">
       </p>
+      <input type="submit" name="find-hotels" id="find-hotels" value="Найти">
     </form>
-    <button type="submit">Найти</button>
+
   </section>
   <section>
     <h2>Карта</h2>
