@@ -50,6 +50,10 @@ a {
   line-height: 24px;
   font-size: 16px;
 }
+.main-navigation {
+  background-color: white;
+  width: 100%;
+}
 
 .homepage {
   width: 1200px;
@@ -87,14 +91,19 @@ button {
   font-weight: bold;
 }
 
-.feature-list li {
+.feature-list li,
+.cause-items li {
   text-align: center;
   line-height: 21px;
   color: black;
 }
-.feature-list h3 {
+.feature-list h3,
+.cause-items h3 {
   font-size: 21px;
   color: #333333;
+}
+.cause-items li {
+  background-color: #eeeeee;
 }
 
 .button-hotel-searching {
