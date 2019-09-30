@@ -194,6 +194,13 @@ button {
   line-height: 21px;
   padding: 10px;
 }
+.btn-details:hover {
+  background-color: #669ec0;
+}
+.btn-details:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
 .btn-booking {
   color: white;
   background-color: #766357;
@@ -201,6 +208,13 @@ button {
   font-size: 14px;
   line-height: 21px;
   padding: 10px 15px;
+}
+.btn-booking:hover {
+  background-color: #604e43;
+}
+.btn-booking:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 
