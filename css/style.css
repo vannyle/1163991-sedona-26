@@ -8,18 +8,42 @@ body {
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
-  background-color: #ffffff;
 }
 
 a {
   text-decoration: none;
 }
 
+html,
+.container {
+  width: 1200px;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  text-align: center;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*index.html*/
 
 .site-navigation,
 .feature-list,
-.cause-items,
+.advantage-items,
 .footer-social,
 .sorting-hotel,
 .infrastructure-hotel,
@@ -45,34 +69,29 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation .active a {
+.site-navigation .active {
   color: #766357;
   line-height: 24px;
   font-size: 16px;
 }
+
 .main-navigation {
   background-color: white;
   width: 100%;
 }
 
 .homepage {
-  width: 1200px;
-  height: 773px;
-  background-image:
-    url("../img/icons/intro-welcome.svg"),
-    url("../img/icons/intro-mask.svg"),
-    url("../img/background-photo.png");
-  background-position:
-    center 132px,
-    center 506px,
-    top center;
+  background-image: url("../img/background-photo.png");
+  background-position: top;
+  background-color: #ffffff;
   background-repeat: no-repeat;
-  background-size: 459px 353px,
-  1201px 56px,
-  1200px auto;
-  z-index: -1;
+  background-size: 1200px 773px;
 }
 
+.intro-welcome svg {
+  width: 459px;
+  text-align: center;
+}
 button {
   font: inherit;
   text-align: center;
@@ -82,30 +101,15 @@ button {
   background-color: #ffffff;
 }
 
-.first-cause, .second-cause {
-  width: 400px;
-  height: 256px;
+.main-intro {
+  background-color: white;
+}
+.advantage-of-city:nth-of-type(1) {
   background-color: #81b3d2;
-  color: white;
-  text-align: center;
-  font-weight: bold;
 }
-
-.feature-list li,
-.cause-items li {
-  text-align: center;
-  line-height: 21px;
-  color: black;
-}
-.feature-list h3,
-.cause-items h3 {
-  font-size: 21px;
-  color: #333333;
-}
-.cause-items li {
+.advantage-section {
   background-color: #eeeeee;
 }
-
 .button-hotel-searching {
   width: 568px;
   height: 86px;
@@ -124,6 +128,7 @@ button {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
+
 .search {
   width: 458px;
   height: 58px;
@@ -134,14 +139,18 @@ button {
   text-align: center;
   font-weight: bold;
 }
+
 .search:hover {
   background-color: #669ec0;
 }
+
 .search:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
-
+iframe {
+  width: 100%;
+}
 .footer-social li {
   width: 46px;
   height: 48px;
@@ -150,15 +159,22 @@ button {
   vertical-align: middle;
   display: inline-block;
 }
-
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+}
 /*inner.html*/
 
-.filter-page {
+.booking-page {
   background-image: url("../img/filter-background.png");
-  background-color: #ffffff;
-  background-size: 1200px 562px;
-  background-repeat: no-repeat;
+  background-color: white;
   background-position: top;
+  background-repeat: no-repeat;
+  background-size: 1200px 562px;
 }
 
 .sorting-hotel a {
@@ -166,50 +182,53 @@ button {
 }
 
 .sorting-hotel a:hover,
-.sorting-hotel .active a {
+.sorting-hotel .active {
   color: #81b3d2;
 }
 
 .sorting-hotel a:focus {
   color: #000000;
 }
-
-.up-button svg:hover path,
-.down-button svg:hover path {
+.up-button {
+  fill: #cacaca;
+}
+.up-button svg:hover,
+.down-button svg:hover  {
   fill: #000000;
 }
 
-.up-button svg:active path,
-.down-button svg:active path {
+.up-button svg:active ,
+.down-button svg:active {
   fill: #81b3d2;
 }
 
-.down-button .active path {
+.down-button .active {
   fill: #81b3d2;
 }
 
-.logo-htmlacademy:hover path {
+.logo-htmlacademy:hover {
   fill: #81b3d2;
 }
 
-.logo-htmlacademy:active path {
+.logo-htmlacademy:active {
   fill: #bdbbbc;
 }
 
-.searching-results h3 a {
+.searching-results .hotel-option {
   color: black;
   font-size: 21px;
   line-height: 26px;
   text-align: left;
 }
 
-.searching-results h3 a:hover {
+.searching-results .hotel-option:hover {
   color: #81b3d2;
 }
 
 .searching-results h3 a:active {
   color: rgba(0, 0, 0, 0.3);
 }
+
 .btn-details {
   color: white;
   background-color: #81b3d2;
@@ -218,13 +237,16 @@ button {
   line-height: 21px;
   padding: 10px;
 }
+
 .btn-details:hover {
   background-color: #669ec0;
 }
+
 .btn-details:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
+
 .btn-booking {
   color: white;
   background-color: #766357;
@@ -233,9 +255,11 @@ button {
   line-height: 21px;
   padding: 10px 15px;
 }
+
 .btn-booking:hover {
   background-color: #604e43;
 }
+
 .btn-booking:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
