@@ -53,14 +53,21 @@ input[type="radio"].visually-hidden {
   list-style: none;
   padding: 0;
 }
-
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  background-color: #ffffff;
+}
+.site-navigation li {
+  padding: 16px;
+}
 .site-navigation a {
   color: #000000;
   font-weight: 700;
   text-align: center;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: white;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 .site-navigation a:hover {
@@ -70,12 +77,21 @@ input[type="radio"].visually-hidden {
 .site-navigation a:focus {
   color: rgba(0, 0, 0, 0.3);
 }
-
+.site-navigation a,
+.main-navigation a {
+  display: block;
+}
 .main-navigation {
   background-color: white;
   width: 100%;
 }
-
+.main-header-logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  padding: 0;
+  top: 0;
+}
 .intro-welcome {
   background-image: url("../img/background-photo.png");
   background-position: top;
