@@ -29,34 +29,34 @@
       <form action="/" method="post">
         <fieldset>
           <legend>Инфаструктура</legend>
-          <ul class="infrastructure-hotel">
+          <ul class="filter-by-type">
             <li>
-              <label for="filter-pool">Бассейн</label>
+              <label>Бассейн</label>
               <input type="checkbox" name="pool" id="filter-pool" checked>
             </li>
             <li>
-              <label for="filter-parking">Парковка</label>
+              <label>Парковка</label>
               <input type="checkbox" name="parking" id="filter-parking">
             </li>
             <li>
-              <label for="filter-wifi">Wi-Fi</label>
+              <label>Wi-Fi</label>
               <input type="checkbox" name="wifi" id="filter-wifi">
             </li>
           </ul>
         </fieldset>
         <fieldset>
           <legend>Тип жилья</legend>
-          <ul class="type-of-housing">
+          <ul class="filter-by-type">
             <li>
-              <label for="filter-hotel">Гостиница</label>
+              <label>Гостиница</label>
               <input type="checkbox" name="hotel" id="filter-hotel" checked>
             </li>
             <li>
-              <label for="filter-motel">Мотель</label>
+              <label>Мотель</label>
               <input type="checkbox" name="motel" id="filter-motel" checked>
             </li>
             <li>
-              <label for="filter-apartments">Апартаменты</label>
+              <label>Апартаменты</label>
               <input type="checkbox" name="apartments" id="filter-apartments" checked>
             </li>
           </ul>
@@ -72,6 +72,9 @@
           <button type="submit">Показать</button>
         </fieldset>
       </form>
+    </section>
+    <section class="sorting">
+      <h2 class="visually-hidden">Сортировка</h2>
       <div>
         <span>Найдено: 3</span>
         <span>Сортировка</span>

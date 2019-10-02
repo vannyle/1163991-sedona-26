@@ -9,7 +9,9 @@ body {
   color: #333333;
   text-transform: uppercase;
 }
-
+main {
+  background-color: white;
+}
 a {
   text-decoration: none;
 }
@@ -21,6 +23,7 @@ html,
   margin: 0 auto;
   text-align: center;
 }
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -46,8 +49,7 @@ input[type="radio"].visually-hidden {
 .advantage-items,
 .footer-social,
 .sorting-hotel,
-.infrastructure-hotel,
-.type-of-housing {
+.filter-by-type {
   list-style: none;
   padding: 0;
 }
@@ -69,18 +71,12 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation .active {
-  color: #766357;
-  line-height: 24px;
-  font-size: 16px;
-}
-
 .main-navigation {
   background-color: white;
   width: 100%;
 }
 
-.homepage {
+.intro-welcome {
   background-image: url("../img/background-photo.png");
   background-position: top;
   background-color: #ffffff;
@@ -92,6 +88,7 @@ input[type="radio"].visually-hidden {
   width: 459px;
   text-align: center;
 }
+
 button {
   font: inherit;
   text-align: center;
@@ -104,12 +101,15 @@ button {
 .main-intro {
   background-color: white;
 }
+
 .advantage-of-city:nth-of-type(1) {
   background-color: #81b3d2;
 }
+
 .advantage-section {
   background-color: #eeeeee;
 }
+
 .button-hotel-searching {
   width: 568px;
   height: 86px;
@@ -148,9 +148,11 @@ button {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
+
 iframe {
   width: 100%;
 }
+
 .footer-social li {
   width: 46px;
   height: 48px;
@@ -159,6 +161,7 @@ iframe {
   vertical-align: middle;
   display: inline-block;
 }
+
 .social-button {
   display: flex;
   align-items: center;
@@ -167,16 +170,27 @@ iframe {
   height: 48px;
   background-color: #81b3d2;
 }
+
 /*inner.html*/
 
-.booking-page {
+.filter-hotel {
   background-image: url("../img/filter-background.png");
   background-color: white;
   background-position: top;
   background-repeat: no-repeat;
   background-size: 1200px 562px;
-}
 
+  color: #ffffff;
+}
+.filter-hotel legend {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+}
+.filter-by-type {
+  text-align: left;
+}
 .sorting-hotel a {
   color: rgba(0, 0, 0, 0.3)
 }
@@ -189,15 +203,17 @@ iframe {
 .sorting-hotel a:focus {
   color: #000000;
 }
+
 .up-button {
   fill: #cacaca;
 }
+
 .up-button svg:hover,
-.down-button svg:hover  {
+.down-button svg:hover {
   fill: #000000;
 }
 
-.up-button svg:active ,
+.up-button svg:active,
 .down-button svg:active {
   fill: #81b3d2;
 }
