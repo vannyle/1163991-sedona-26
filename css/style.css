@@ -9,11 +9,18 @@ body {
   color: #333333;
   text-transform: uppercase;
 }
+
 main {
   background-color: white;
 }
+
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 html,
@@ -53,21 +60,22 @@ input[type="radio"].visually-hidden {
   list-style: none;
   padding: 0;
 }
+
 .site-navigation {
   display: flex;
   justify-content: space-around;
   margin: auto;
   background-color: #ffffff;
 }
-.site-navigation li {
-  padding: 16px;
-}
-.site-navigation a {
+
+.site-navigation a:not(.main-header-logo) {
   color: #000000;
   font-weight: 700;
-  text-align: center;
+  vertical-align: middle;
   font-size: 14px;
   line-height: 26px;
+  display: block;
+  padding: 15px 10px;
 }
 
 .site-navigation a:hover {
@@ -77,14 +85,24 @@ input[type="radio"].visually-hidden {
 .site-navigation a:focus {
   color: rgba(0, 0, 0, 0.3);
 }
-.site-navigation a,
-.main-navigation a {
+
+.site-navigation a {
   display: block;
 }
+
+.site-navigation li:nth-of-type(2) {
+  margin-right: 90px;
+}
+
+.site-navigation li:nth-of-type(3) {
+  margin-left: 40px;
+}
+
 .main-navigation {
   background-color: white;
   width: 100%;
 }
+
 .main-header-logo {
   position: absolute;
   left: 50%;
@@ -92,17 +110,19 @@ input[type="radio"].visually-hidden {
   padding: 0;
   top: 0;
 }
+
 .intro-welcome {
   background-image: url("../img/background-photo.png");
   background-position: top;
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-size: 1200px 773px;
+  background-size: cover;
 }
 
 .intro-welcome svg {
   width: 459px;
-  text-align: center;
+  height: 353px;
+  justify-content: center;
 }
 
 button {
@@ -118,8 +138,64 @@ button {
   background-color: white;
 }
 
+.intro-about-city {
+  display: flex;
+  flex-flow: row-reverse;
+  min-height: 256px;
+}
+
+.intro-about-city-2 {
+  display: flex;
+  min-height: 256px;
+}
+
 .advantage-of-city:nth-of-type(1) {
   background-color: #81b3d2;
+  width: 400px;
+  color: #ffffff;
+  padding: 55px 60px;
+  box-sizing: border-box;
+}
+
+.advantage-of-city h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.feature-picture img {
+  width: 800px;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.feature-list li {
+  width: 400px;
+  padding: 70px 50px;
+}
+
+.feature-list h3 {
+  position: relative;
+  margin: 70px;
+}
+
+.feature-list h3,
+.advantages h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.advantage-items {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.advantage-items li {
+  padding: 55px 70px;
 }
 
 .advantage-section {
@@ -156,6 +232,18 @@ button {
   font-weight: bold;
 }
 
+.search-form {
+  position: absolute;
+}
+
+.search-form form {
+  width: 568px;
+  background-color: #ffffff;
+  padding-top: 10px;
+  left: 50%;
+  margin-left: 316px;
+}
+
 .search:hover {
   background-color: #669ec0;
 }
@@ -167,6 +255,7 @@ button {
 
 iframe {
   width: 100%;
+  min-height: 593px;
 }
 
 .footer-social li {
@@ -187,6 +276,13 @@ iframe {
   background-color: #81b3d2;
 }
 
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 /*inner.html*/
 
 .filter-hotel {
@@ -198,15 +294,47 @@ iframe {
 
   color: #ffffff;
 }
+
+.container-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+fieldset {
+  border: none;
+}
+
+.type-filter-hotel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .filter-hotel legend {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
   text-align: left;
 }
+
 .filter-by-type {
   text-align: left;
 }
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.sorting-hotel {
+  display: flex;
+}
+
+.sorting-hotel li {
+  padding: 0 20px;
+}
+
 .sorting-hotel a {
   color: rgba(0, 0, 0, 0.3)
 }
@@ -238,6 +366,10 @@ iframe {
   fill: #81b3d2;
 }
 
+.searching-results {
+  text-align: left;
+}
+
 .logo-htmlacademy:hover {
   fill: #81b3d2;
 }
@@ -246,28 +378,41 @@ iframe {
   fill: #bdbbbc;
 }
 
-.searching-results .hotel-option {
+.searching-results .hotel-name {
   color: black;
   font-size: 21px;
   line-height: 26px;
   text-align: left;
 }
 
-.searching-results .hotel-option:hover {
+.searching-results .hotel-name:hover {
   color: #81b3d2;
 }
 
-.searching-results h3 a:active {
+.searching-results .hotel-name:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.hotel-option {
+  border-bottom: 1px solid rgba(0, 1, 1, 0.2);
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotel-info {
+  margin-top: -20px;
+  padding: 0 20px;
+}
+.hotel-details {
+  display: flex;
+}
 .btn-details {
   color: white;
   background-color: #81b3d2;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  padding: 10px;
 }
 
 .btn-details:hover {
@@ -285,7 +430,6 @@ iframe {
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  padding: 10px 15px;
 }
 
 .btn-booking:hover {
