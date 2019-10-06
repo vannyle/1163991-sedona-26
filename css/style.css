@@ -69,15 +69,15 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.site-navigation a:not(.main-header-logo) {
+.site-navigation a {
   color: #000000;
   font-weight: 700;
-  vertical-align: middle;
   font-size: 14px;
   line-height: 26px;
-  display: block;
-  padding: 15px 10px;
+  padding: 15px 0;
 }
+
+
 
 .site-navigation a:hover {
   color: #81b3d2;
@@ -91,13 +91,13 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-.site-navigation li:nth-of-type(2) {
-  margin-right: 90px;
-}
+/*.site-navigation li:nth-of-type(2) {*/
+/*  margin-right: 100px;*/
+/*}*/
 
-.site-navigation li:nth-of-type(3) {
-  margin-left: 40px;
-}
+/*.site-navigation li:nth-of-type(3) {*/
+/*  margin-left: 100px;*/
+/*}*/
 
 .main-navigation {
   background-color: white;
@@ -320,15 +320,16 @@ iframe {
   background-color: white;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 1200px 562px;
 
   color: #ffffff;
+
 }
 
 .container-box {
   display: flex;
   justify-content: space-between;
   padding: 30px 50px;
+  height: 218px;
 }
 
 fieldset {
