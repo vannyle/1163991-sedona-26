@@ -1,5 +1,6 @@
+
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 1200px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -8,7 +9,7 @@ body {
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
-  margin: 0;
+  background-color: #f2f2f2;
 }
 
 main {
@@ -24,13 +25,13 @@ img {
   height: auto;
 }
 
-html,
 .container {
-  width: 1200px;
-  background-color: #f2f2f2;
+  width: 100%;
   margin: 0 auto;
+  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   text-align: center;
-  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+
+  position: relative;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -65,32 +66,33 @@ input[type="radio"].visually-hidden {
 
 .site-navigation {
   display: flex;
-  justify-content: center;
-  margin: auto;
+  justify-content: space-between;
+  margin: 0;
   background-color: #ffffff;
-  padding: 15px 0;
+  padding: 15px 72px;
 }
 
-li.menu-item {
+.menu-item {
   display: inline-block;
   width: 239px;
 }
 
-.menu-item.left {
+.left {
   text-align: left;
 }
 
-.menu-item.right {
+.right {
   text-align: right;
 }
 
 .menu-item.left:nth-of-type(2) {
-  padding-right: 48px;
+  margin-right: 48px;
 }
 
 .menu-item.right:nth-of-type(3) {
-  padding-left: 50px;
+  margin-left: 46px;
 }
+
 .site-navigation a {
   color: #000000;
   font-weight: 700;
@@ -110,13 +112,13 @@ li.menu-item {
 
 .main-navigation {
   background-color: white;
-  width: 100%;
+  position: relative;
 }
 
 .main-header-logo {
   position: absolute;
   left: 50%;
-  margin-left: -70px;
+  transform: translateX(-50%);
   padding: 0;
   top: 0;
 }
@@ -133,7 +135,6 @@ li.menu-item {
 .intro-welcome svg {
   width: 458px;
   height: 352px;
-  justify-content: center;
   margin-top: 77px;
 }
 
@@ -148,13 +149,13 @@ button {
 
 .main-intro {
   background-color: white;
-  margin: 56px;
+  margin: 55px;
   letter-spacing: 0.1px;
 }
 
 .main-intro h3 {
   font-size: 21px;
-  line-height: 27px;
+  line-height: 28px;
   width: 600px;
   margin: 0 auto 29px;
 }
@@ -178,7 +179,7 @@ button {
   background-color: #81b3d2;
   width: 400px;
   color: #ffffff;
-  padding: 46px 60px 64px;
+  padding: 47px 60px 64px;
   box-sizing: border-box;
   height: 256px;
 }
@@ -245,6 +246,10 @@ button {
   background-color: #eeeeee;
 }
 
+.booking-hotel {
+  position: relative;
+}
+
 .search-suggestion {
   width: 434px;
   margin: 0 auto;
@@ -293,7 +298,7 @@ button {
   background-color: #ffffff;
   width: 568px;
   left: 50%;
-  margin-left: -284px;
+  transform: translateX(-50%);
   min-height: 395px;
 }
 
@@ -335,6 +340,9 @@ iframe {
 
 .main-footer {
   display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 1200px;
   justify-content: space-around;
   background-color: rgba(255, 255, 255, 0.9);
 }
