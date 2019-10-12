@@ -187,17 +187,21 @@ button {
 .advantage-of-city h3 {
   font-size: 21px;
   line-height: 21px;
-  margin: auto 35px;
+  margin: 0 35px;
 }
 
 .advantage-of-city p {
   margin-top: 23px;
 }
 
+.advantage-of-city.advantage2 {
+  padding: 47px 48px 64px;
+}
+
 .feature-picture.picture1 {
   width: 800px;
   background-image: url("../img/feature-picture-1.png");
-  background-position: 0 -80px;
+  background-position: 0 -78px;
 }
 
 .feature-picture.picture2 {
@@ -210,19 +214,68 @@ button {
   display: flex;
   justify-content: space-between;
   margin: 0;
+  padding: 0;
 }
 
 .feature-list li {
   width: 400px;
-  padding: 50px 50px;
+  padding: 0 50px;
+  display: block;
 }
 
-.feature-list h3 {
+.feature-item h3 {
   position: relative;
-  margin: 30px;
+  padding-top: 29px;
+  margin: 131px 25px 25px;
 }
 
-.feature-list h3,
+.feature-item .housing::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icons/icon-1.svg");
+  background-repeat: no-repeat;
+
+  width: 75px;
+  height: 72px;
+
+  top: -71px;
+  left: 50%;
+  margin-left: -37px;
+}
+
+.feature-item .food::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icons/icon-3.svg");
+  background-repeat: no-repeat;
+
+  width: 75px;
+  height: 72px;
+
+  top: -71px;
+  left: 50%;
+  margin-left: -37px;
+}
+
+.feature-item .souvenir::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icons/icon-2.svg");
+  background-repeat: no-repeat;
+
+  width: 75px;
+  height: 78px;
+
+  top: -76px;
+  left: 50%;
+  margin-left: -32px;
+}
+
+.feature-item p {
+  margin-bottom: 82px;
+}
+
+.feature-item h3,
 .advantages h3 {
   font-size: 21px;
   line-height: 21px;
@@ -235,11 +288,15 @@ button {
 }
 
 .advantage-items li {
-  padding: 55px 70px;
+  padding: 49px 50px;
 }
 
 .advantage-items h3 {
-  margin: auto 50px;
+  margin: 0 33px;
+}
+
+.advantages p:first-of-type {
+  margin-top: 23px;
 }
 
 .advantage-section {
@@ -343,6 +400,7 @@ iframe {
   position: absolute;
   bottom: 0;
   width: 1200px;
+  min-height: 120px;
   justify-content: space-around;
   background-color: rgba(255, 255, 255, 0.9);
 }
