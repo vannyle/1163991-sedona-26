@@ -138,6 +138,15 @@ input[type="radio"].visually-hidden {
   margin-top: 77px;
 }
 
+.decoration-item {
+  background-image: url("../img/icons/intro-mask.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 59px;
+  background-position: bottom;
+  margin-top: 19px;
+}
+
 button {
   font: inherit;
   text-align: center;
@@ -298,7 +307,7 @@ button {
 }
 
 .advantages p {
-  margin: 23px 0;
+  margin: 23px 0 0;
   letter-spacing: 0.1px;
 }
 
@@ -313,7 +322,7 @@ button {
 .search-suggestion {
   width: 435px;
   margin: 0 auto 10px;
-  padding: 21px;
+  padding: 24px;
 }
 
 .search-suggestion h2 {
@@ -327,7 +336,7 @@ button {
 
 .button-hotel-searching {
   width: 568px;
-  min-height: 86px;
+  min-height: 85px;
   background-color: #766357;
   color: white;
   font-weight: bold;
@@ -389,6 +398,8 @@ button {
   flex-wrap: wrap;
   margin: 31px 0;
   align-items: center;
+
+  position: relative;
 }
 
 .search-form input {
@@ -409,6 +420,21 @@ button {
 .search-form input:focus {
   background-color: #ffffff;
   border: 2px solid #f2f2f2;
+}
+
+.icon-calendar {
+  position: absolute;
+  top: 6px;
+  left: 428px;
+  fill: #a9a9a9;
+}
+
+.icon-calendar:hover {
+  fill: #000000;
+}
+
+.icon-calendar:focus {
+  fill: #81b3d2;
 }
 
 .number-of-pax {
@@ -436,14 +462,19 @@ button {
 .number-of-pax .minus,
 .number-of-pax .plus {
   font-size: 24px;
+  color: #a9a9a9;
 }
 
-
-.calendar-icon {
-  background-image: url("../img/icons/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 318px center;
+.number-of-pax .minus:hover,
+.number-of-pax .plus:hover {
+  color: #000000;
 }
+
+.number-of-pax .minus:focus,
+.number-of-pax .plus:focus {
+  color: #81b3d2;
+}
+
 
 iframe {
   width: 100%;
@@ -454,7 +485,6 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .social-button {
@@ -467,12 +497,24 @@ iframe {
   margin-right: 4px;
 }
 
+.social-button:hover {
+  background-color: #669ec0;
+}
+
+.social-button:active {
+  background-color: #5496bd;
+}
+
+.social-button svg:active {
+  fill-opacity: 0.3;
+}
+
 .main-footer {
   display: flex;
   position: absolute;
   bottom: 0;
   width: 1200px;
-  min-height: 128px;
+  min-height: 126px;
   justify-content: space-around;
   background-color: rgba(255, 255, 255, 0.9);
   align-items: center;
