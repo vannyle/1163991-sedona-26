@@ -450,22 +450,21 @@ iframe {
   min-height: 593px;
 }
 
-.footer-social li {
-  width: 46px;
-  height: 48px;
-  background-color: #81b3d2;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
+.social-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .social-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
+  width: 48px;
   height: 48px;
   background-color: #81b3d2;
+  margin-right: 4px;
 }
 
 .main-footer {
@@ -473,7 +472,7 @@ iframe {
   position: absolute;
   bottom: 0;
   width: 1200px;
-  min-height: 120px;
+  min-height: 128px;
   justify-content: space-around;
   background-color: rgba(255, 255, 255, 0.9);
   align-items: center;
@@ -485,7 +484,20 @@ iframe {
   font-weight: bold;
 }
 
+.footer-item {
+  width: 400px;
+  justify-content: center;
+}
 
+.social-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visitsedona {
+  margin: 0;
+}
 
 .htmlacademy {
   display: flex;
@@ -494,6 +506,7 @@ iframe {
 
 .htmlacademy span {
   line-height: 26px;
+  margin-right: 10px;
 }
 
 /*inner.html*/
