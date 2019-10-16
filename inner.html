@@ -18,7 +18,7 @@
         <li class="menu-item left"><a href="information.html">Информация</a></li>
         <li class="menu-item left"><a href="gallery.html">Фото и Видео</a></li>
         <li class="menu-item right"><a href="maps.html">Карта Штата</a></li>
-        <li class="menu-item right"><a href="inner.html">Гостиницы</a></li>
+        <li class="menu-item right"><a class="active" href="inner.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -29,50 +29,60 @@
       <form action="/" method="post" class="filter-form">
         <div class="container-box">
           <div class="type-filter-hotel">
-            <fieldset>
-              <legend>Инфаструктура</legend>
-              <ul class="filter-by-type">
-                <li>
-                  <input type="checkbox" name="pool" id="filter-pool" checked>
+            <fieldset class="filter-by-type">
+              <legend>Инфраструктура:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input" type="checkbox" name="pool" id="filter-pool" checked>
                   <label for="filter-pool">Бассейн</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="parking" id="filter-parking">
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input" type="checkbox" name="parking" id="filter-parking">
                   <label for="filter-parking">Парковка</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="wifi" id="filter-wifi">
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input" type="checkbox" name="wifi" id="filter-wifi">
                   <label for="filter-wifi">Wi-Fi</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Тип жилья</legend>
-              <ul class="filter-by-type">
-                <li>
-                  <input type="checkbox" name="hotel" id="filter-hotel" checked>
+            <fieldset class="filter-by-type">
+              <legend>Тип жилья:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input" type="checkbox" name="hotel" id="filter-hotel" checked>
                   <label for="filter-hotel">Гостиница</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="motel" id="filter-motel" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input" type="checkbox" name="motel" id="filter-motel" checked>
                   <label for="filter-motel">Мотель</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input" type="checkbox" name="apartments" id="filter-apartments"
+                         checked>
                   <label for="filter-apartments">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
           </div>
-          <fieldset>
-            <legend>Стоимость в сутки (Р):</legend>
-            <label for="min-price">От
-              <input type="submit" name="min-price" id="min-price" value="0">
-            </label>
-            <label for="max-price">До
-              <input type="submit" name="max-price" id="max-price" value="3000">
-            </label>
-            <button type="submit">Показать</button>
+          <fieldset class="price-panel">
+            <legend class="filter-range-title">Стоимость в сутки (Р):</legend>
+            <div class="price-controls">
+              <label class="min-price" for="min-price">От
+                <input type="submit" name="min-price" id="min-price" value="0">
+              </label>
+              <label class="max-price" for="max-price">До
+                <input type="submit" name="max-price" id="max-price" value="3000">
+              </label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle toggle-min"></div>
+              <div class="range-toggle toggle-max"></div>
+            </div>
+            <button type="submit" class="btn-show">Показать</button>
           </fieldset>
         </div>
       </form>
@@ -216,12 +226,11 @@
       </div>
     </section>
   </main>
+
   <footer class="main-footer">
-    <div>
-      <p>#VISITSEDONA</p>
-    </div>
-    <div class="footer-social">
-      <ul>
+    <p class="footer-item visitsedona">#VISITSEDONA</p>
+    <div class="footer-item footer-social">
+      <ul class="social-item">
         <li>
           <a href="#" class="social-button">
             <span class="visually-hidden">Twitter</span>
@@ -232,7 +241,7 @@
             </svg>
           </a>
         </li>
-        <li>
+        <li class="social-item">
           <a href="#" class="social-button">
             <span class="visually-hidden">Facebook</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
@@ -240,7 +249,7 @@
             </svg>
           </a>
         </li>
-        <li>
+        <li class="social-item">
           <a href="#" class="social-button">
             <span class="visually-hidden">Youtube</span>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16"
@@ -252,7 +261,7 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div class="footer-item htmlacademy">
       <span>Website by</span>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <svg class="logo-htmlacademy" width="115" height="41" id="Layer_1" data-name="Layer 1"
