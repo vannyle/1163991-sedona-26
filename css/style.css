@@ -684,7 +684,7 @@ fieldset {
   cursor: pointer;
 }
 
-.price-controls::after{
+.price-controls::after {
   content: "";
   position: absolute;
   background-color: white;
@@ -761,34 +761,57 @@ fieldset {
   display: flex;
   font-size: 12px;
   line-height: 18px;
+  align-items: center;
+  width: 50%;
 }
 
-.number-results {
+.sorting-results {
   line-height: 26px;
   font-size: 21px;
   font-weight: bold;
-  margin: 10px;
+  margin: 0 47px 0 0;
+}
+
+.sorting-item {
+  margin: 0 40px 0 0;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .sorting-hotel {
   display: flex;
+  justify-content: space-between;
+  width: 240px;
+
 }
 
 .sorting-hotel a {
   color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 1px dotted #81b3d2;
 }
 
-.sorting-hotel a:hover,
+.sorting-hotel a:hover {
+  color: #81b3d2;
+}
+
 .sorting-hotel .active {
   color: #81b3d2;
+  border: none;
 }
 
 .sorting-hotel a:focus {
   color: #000000;
 }
 
+.updown-buttons {
+  margin: 13px 0;
+}
+
 .up-button {
   fill: #cacaca;
+  margin-right: 9px;
 }
 
 .up-button svg:hover,
@@ -847,7 +870,7 @@ fieldset {
 
 .hotel-option {
   border-bottom: 1px solid rgba(0, 1, 1, 0.2);
-  padding: 20px 60px;
+  padding: 30px 72px 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -857,12 +880,29 @@ div.hotel-option:first-of-type {
 }
 
 .hotel-info {
-  margin-top: -20px;
-  padding: 0 20px;
+  padding: 0;
+  margin: 0 0 0 30px;
+}
+
+.hotel-items {
+  display: flex;
+  justify-content: space-between;
+  width: 258px;
+}
+
+.hotel-info h3 {
+  margin: 0;
+}
+
+.hotel-items p {
+  margin: 0;
+  display: block;
+
 }
 
 .hotel-details {
   display: flex;
+  align-items: center;
 }
 
 .btn-details {
