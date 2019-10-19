@@ -235,59 +235,44 @@ button {
   display: block;
 }
 
-.feature-item h3 {
+.feature-items h3 {
   position: relative;
   padding-top: 29px;
   margin: 131px 25px 25px;
 }
 
-.feature-item .housing::before {
+.feature-item::before {
   content: "";
   position: absolute;
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+  top: -71px;
+  left: 50%;
+}
+
+.feature-items .housing::before {
   background-image: url("../img/icons/icon-1.svg");
-  background-repeat: no-repeat;
-
-  width: 75px;
-  height: 72px;
-
-  top: -71px;
-  left: 50%;
-  margin-left: -37px;
+  transform: translateX(-50%);
 }
 
-.feature-item .food::before {
-  content: "";
-  position: absolute;
+.feature-items .food::before {
   background-image: url("../img/icons/icon-3.svg");
-  background-repeat: no-repeat;
-
-  width: 75px;
-  height: 72px;
-
-  top: -71px;
-  left: 50%;
-  margin-left: -37px;
+  transform: translateX(-50%);
 }
 
-.feature-item .souvenir::before {
-  content: "";
-  position: absolute;
+.feature-items .souvenir::before {
   background-image: url("../img/icons/icon-2.svg");
-  background-repeat: no-repeat;
-
-  width: 75px;
-  height: 78px;
-
-  top: -76px;
-  left: 50%;
   margin-left: -32px;
+  top: -76px;
+  height: 78px;
 }
 
-.feature-item p {
+.feature-items p {
   margin-bottom: 82px;
 }
 
-.feature-item h3,
+.feature-items h3,
 .advantages h3 {
   font-size: 21px;
   line-height: 21px;
@@ -489,8 +474,12 @@ button {
 
 .map {
   width: 100%;
-  min-height: 593px;
   background-image: url("../img/map.png");
+}
+
+iframe {
+  width: 1200px;
+  height: 587px;
 }
 
 .main-footer {
@@ -518,11 +507,10 @@ button {
   justify-content: center;
 }
 
-.social-item {
+.footer-social ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
   padding: 0;
   list-style: none;
   width: 400px;
@@ -546,7 +534,7 @@ button {
   background-color: #669ec0;
 }
 
-.social-button:active {
+.social-button:focus {
   background-color: #5496bd;
 }
 
@@ -686,7 +674,7 @@ fieldset {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 35px;
+  padding-left: 43px;
   line-height: 24px;
   margin-top: 5px;
 
@@ -755,7 +743,8 @@ fieldset {
   cursor: pointer;
 }
 
-.btn-show:hover {
+.btn-show:hover,
+.btn-show:focus {
   background-color: #ffffff;
   color: #000;
 }
@@ -852,6 +841,7 @@ fieldset {
 
 .star {
   list-style: none;
+  margin-left: 6px;
 }
 
 .logo-htmlacademy:hover {
@@ -863,6 +853,8 @@ fieldset {
 }
 
 .searching-results .hotel-name {
+  display: block;
+  width: 500px;
   color: black;
   font-size: 21px;
   line-height: 17px;
@@ -906,7 +898,7 @@ div.hotel-option:first-of-type {
 
 .hotel-items p {
   display: block;
-  margin: 0 0 17px;
+  margin: 4px 0 17px;
 
 }
 
@@ -956,4 +948,9 @@ div.hotel-option:first-of-type {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.rating-of-hotel span {
+  background-color: #f2f2f2;
+  padding: 5px 13px;
 }
