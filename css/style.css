@@ -905,6 +905,10 @@ div.hotel-option:first-of-type {
   align-items: center;
 }
 
+.hotel-button {
+  padding: 5px 17px;
+}
+
 .btn-details {
   color: white;
   background-color: #81b3d2;
@@ -939,3 +943,8 @@ div.hotel-option:first-of-type {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.rating-of-hotel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
