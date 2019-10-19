@@ -2,7 +2,6 @@
 body {
   margin: 0 auto;
   padding: 0;
-  width: 1200px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -26,7 +25,7 @@ img {
 }
 
 .container {
-  width: 100%;
+  width: 1200px;
   margin: 0 auto;
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   text-align: center;
@@ -73,7 +72,6 @@ input[type="radio"].visually-hidden {
 }
 
 .menu-item {
-  display: inline-block;
   width: 239px;
 }
 
@@ -123,17 +121,16 @@ input[type="radio"].visually-hidden {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0;
   top: 0;
 }
 
 .intro-welcome {
   background-image: url("../img/background-photo.png");
   background-position: 0 -83px;
-  background-color: #ffffff;
+  background-color: #81b3d2;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 510px;
+  min-height: 510px;
 }
 
 .intro-welcome svg {
@@ -142,13 +139,16 @@ input[type="radio"].visually-hidden {
   margin-top: 77px;
 }
 
-.decoration-item {
+.main-intro::before {
+  content: "";
   background-image: url("../img/icons/intro-mask.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  width: 1200px;
   height: 59px;
-  background-position: bottom;
-  margin-top: 19px;
+  position: absolute;
+  top: -112px;
+  left: -55px;
 }
 
 button {
@@ -164,6 +164,7 @@ button {
   background-color: white;
   margin: 55px;
   letter-spacing: 0.1px;
+  position: relative;
 }
 
 .main-intro h3 {
@@ -175,15 +176,13 @@ button {
 
 .intro-about-city {
   display: flex;
+}
+
+.intro1 {
   flex-flow: row-reverse;
 }
 
-.intro-about-city-2 {
-  display: flex;
-}
-
-.intro-about-city img,
-.intro-about-city-2 img {
+.intro-about-city img {
   height: 256px;
   margin-top: -15px;
 }
@@ -192,9 +191,9 @@ button {
   background-color: #81b3d2;
   width: 400px;
   color: #ffffff;
-  padding: 47px 60px 64px;
+  padding: 47px 60px 43px;
   box-sizing: border-box;
-  height: 256px;
+  min-height: 256px;
 }
 
 .advantage-of-city h3 {
@@ -208,7 +207,7 @@ button {
 }
 
 .advantage-of-city.advantage2 {
-  padding: 47px 48px 64px;
+  padding: 47px 48px 43px;
 }
 
 .feature-picture.picture1 {
@@ -346,6 +345,7 @@ button {
   font-weight: bold;
   line-height: 26px;
   font-size: 21px;
+  cursor: pointer;
 }
 
 .button-hotel-searching:hover {
@@ -365,7 +365,8 @@ button {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  margin-top: 23px;
+  margin-top: 21px;
+  cursor: pointer;
 }
 
 .search:hover {
@@ -432,9 +433,10 @@ button {
 
 .icon-calendar {
   position: absolute;
-  top: 6px;
-  left: 428px;
+  top: 5px;
+  left: 422px;
   fill: #a9a9a9;
+  background: transparent;
 }
 
 .icon-calendar:hover {
@@ -457,6 +459,7 @@ button {
 .number-of-pax input {
   width: 38px;
   height: 38px;
+  text-align: center;
 }
 
 .number-of-pax label {
@@ -471,6 +474,7 @@ button {
 .number-of-pax .plus {
   font-size: 24px;
   color: #a9a9a9;
+  cursor: pointer;
 }
 
 .number-of-pax .minus:hover,
@@ -489,43 +493,18 @@ button {
   background-image: url("../img/map.png");
 }
 
-.social-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.social-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background-color: #81b3d2;
-  margin-right: 4px;
-}
-
-.social-button:hover {
-  background-color: #669ec0;
-}
-
-.social-button:active {
-  background-color: #5496bd;
-}
-
-.social-button svg:active {
-  fill-opacity: 0.3;
-}
-
 .main-footer {
   display: flex;
-  position: absolute;
-  bottom: 0;
   width: 1200px;
-  min-height: 126px;
+  min-height: 120px;
   justify-content: space-around;
   background-color: rgba(255, 255, 255, 0.9);
   align-items: center;
+}
+
+.main-footer.homepage {
+  position: absolute;
+  bottom: 0;
 }
 
 .visitsedona {
@@ -540,13 +519,39 @@ button {
 }
 
 .social-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 400px;
 }
 
 .visitsedona {
   margin: 0;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  margin-right: 6px;
+}
+
+.social-button:hover {
+  background-color: #669ec0;
+}
+
+.social-button:active {
+  background-color: #5496bd;
+}
+
+.social-button svg:active {
+  fill-opacity: 0.3;
 }
 
 .htmlacademy {
@@ -663,6 +668,7 @@ fieldset {
   border-radius: 2px;
   box-sizing: border-box;
   cursor: pointer;
+  height: 38px;
 }
 
 .price-controls input {
@@ -672,14 +678,17 @@ fieldset {
   font-size: inherit;
   line-height: inherit;
   padding: 0;
-
+  width: 50px;
+  margin: 0;
   cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
+  width: 90px;
+  padding-left: 35px;
   line-height: 24px;
-  margin: 5px 5px 5px 20px;
+  margin-top: 5px;
 
   cursor: pointer;
 }
@@ -697,7 +706,6 @@ fieldset {
 .range-controls {
   position: relative;
   margin: 19px 0 31px;
-  cursor: pointer;
 }
 
 .range-controls .scale {
@@ -718,6 +726,7 @@ fieldset {
   width: 20px;
   height: 22px;
   top: -10px;
+  cursor: pointer;
 }
 
 .range-toggle:hover {
@@ -856,8 +865,9 @@ fieldset {
 .searching-results .hotel-name {
   color: black;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 17px;
   text-align: left;
+  letter-spacing: 0.2px;
 }
 
 .searching-results .hotel-name:hover {
@@ -870,7 +880,7 @@ fieldset {
 
 .hotel-option {
   border-bottom: 1px solid rgba(0, 1, 1, 0.2);
-  padding: 30px 72px 20px;
+  padding: 28px 72px 26px;
   display: flex;
   justify-content: space-between;
 }
@@ -891,18 +901,17 @@ div.hotel-option:first-of-type {
 }
 
 .hotel-info h3 {
-  margin: 0;
+  margin: 0 0 9px;
 }
 
 .hotel-items p {
-  margin: 0;
   display: block;
+  margin: 0 0 17px;
 
 }
 
 .hotel-details {
   display: flex;
-  align-items: center;
 }
 
 .hotel-button {
