@@ -182,11 +182,6 @@ button {
   flex-flow: row-reverse;
 }
 
-.intro-about-city img {
-  flex-grow: 1;
-  height: 256px;
-}
-
 .advantage-of-city {
   background-color: #81b3d2;
   width: 400px;
@@ -209,20 +204,6 @@ button {
 .advantage-of-city.advantage2 {
   padding: 47px 48px 43px;
 }
-
-/*.feature-picture.picture1 {*/
-/*  width: 800px;*/
-/*  background-image: url("../img/feature-picture-1.png");*/
-/*  background-position: 0 -78px;*/
-/*  background-color: #81b3d2;*/
-/*}*/
-
-/*.feature-picture.picture2 {*/
-/*  width: 800px;*/
-/*  background-image: url("../img/feature-picture-2.png");*/
-/*  background-position: 0 -76px;*/
-/*  background-color: #81b3d2;*/
-/*}*/
 
 .feature-list {
   display: flex;
@@ -639,6 +620,28 @@ fieldset {
   position: absolute;
 
   background-image: url("../img/icons/checkbox-on.svg");
+  background-size: cover;
+  width: 27px;
+  height: 23px;
+  left: -40px;
+}
+
+.filter-input:disabled + label::before {
+  content: "";
+  position: absolute;
+
+  background-image: url("../img/icons/checkbox-off-3.svg");
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  left: -40px;
+}
+
+.filter-input:disabled:checked + label::after {
+  content: "";
+  position: absolute;
+
+  background-image: url("../img/icons/checkbox-on-2.svg");
   background-size: cover;
   width: 27px;
   height: 23px;
