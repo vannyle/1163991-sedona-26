@@ -176,6 +176,8 @@ button {
 
 .intro-about-city {
   display: flex;
+  align-items: flex-start;
+  background-color: #81b3d2;
 }
 
 .intro1 {
@@ -355,12 +357,23 @@ button {
   min-height: 395px;
   margin: 0;
   padding: 0;
-
+  transition: height 0.3s ease;
+  overflow: hidden;
+  height: 0;
 }
 
 .search-information {
   width: 458px;
   margin: 57px auto;
+  display: block;
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .search-items {
@@ -385,6 +398,7 @@ button {
 .search-items input[type="text"]::-moz-placeholder {
   color: #000000;
 }
+
 .search-items input[type="text"]:-ms-input-placeholder {
   color: #000000;
 }
@@ -474,16 +488,6 @@ button {
 .number-of-pax .minus:focus,
 .number-of-pax .plus:focus {
   color: #81b3d2;
-}
-
-.map {
-  width: 100%;
-  background-image: url("../img/map.png");
-}
-
-iframe {
-  width: 1200px;
-  height: 587px;
 }
 
 .main-footer {
@@ -929,6 +933,7 @@ div.hotel-option:first-of-type {
 
 .hotel-button {
   padding: 5px 17px;
+
 }
 
 .btn-details {
@@ -973,5 +978,6 @@ div.hotel-option:first-of-type {
 
 .rating-of-hotel span {
   background-color: #f2f2f2;
-  padding: 5px 13px;
+  padding: 4px 13px;
+  margin-bottom: 3px;
 }
