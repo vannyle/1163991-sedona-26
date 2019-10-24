@@ -1,9 +1,19 @@
 var link = document.querySelector(".button-hotel-searching");
 var popup = document.querySelector(".search-form");
+  popup.classList.add("modal-close");
 
-var form = popup.querySelector("form");
+var form = document.querySelector(".search-information");
 var arrival = form.querySelector("[name=arrival]");
-var departure = form.querySelector("[name=departure");
+var departure = form.querySelector("[name=departure]");
+
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -15,10 +25,9 @@ link.addEventListener("click", function (evt) {
   arrival.focus();
 });
 
-
 form.addEventListener("submit", function (evt) {
   if (!arrival.value || !departure.value) {
-    evt.preventDefault();
-    popup.classList.add("modal-error")
+  evt.preventDefault();
+  popup.classList.add("modal-error");
   }
-})
+});
