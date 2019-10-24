@@ -6,28 +6,27 @@ var form = document.querySelector(".search-information");
 var arrival = form.querySelector("[name=arrival]");
 var departure = form.querySelector("[name=departure]");
 
-var isStorageSupport = true;
-var storage = "";
-
-try {
-  storage = localStorage.getItem("login");
-} catch (err) {
-  isStorageSupport = false;
-}
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
   if (popup.classList.contains("modal-close")) {
-    popup.classList.remove("modal-close");
+    popup.classList.add("modal-shown");
+    setTimeout(function () {
+      arrival.focus();
+    }, 500);
   } else {
+    popup.classList.remove("modal-shown")
     popup.classList.add("modal-close");
   }
-  arrival.focus();
 });
+
+
 
 form.addEventListener("submit", function (evt) {
   if (!arrival.value || !departure.value) {
   evt.preventDefault();
+  popup.classList.remove("modal-error");
+  popup.offsetWidth = popup.offsetWidth;
   popup.classList.add("modal-error");
   }
 });
