@@ -1,6 +1,6 @@
 # Project «Sedona»
 ---
-### [Demo](https://vannyle.github.io/1163991-sedona-26/)
+### [Demo](https://vannyle.github.io/sedona/)
 ---
 * Student: [Vanny Le](https://up.htmlacademy.ru/htmlcss/26/user/1163991).
 * Mentor: `Victoria Kovalenko`.
