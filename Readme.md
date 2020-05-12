@@ -10,6 +10,7 @@
 
 Created while attending course «[HTML и CSS, уровень 1](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
 
+---
 ### Main page
 ![alt text](index-page.png)
 ### Inner page
